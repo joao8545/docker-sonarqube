@@ -21,6 +21,7 @@ $> docker run \
     -v sonarqube_data:/opt/sonarqube/data \
     -v sonarqube_extensions:/opt/sonarqube/extensions \
     -v sonarqube_logs:/opt/sonarqube/logs \
+    -v sonarqube_temp:/opt/sonarqube/temp \
     --name="sonarqube" -p 9000:9000 sonarqube:community
 ```
 The above command starts SonarQube with an embedded database. We recommend starting the instance with a separate database
@@ -30,6 +31,7 @@ $> docker run \
     -v sonarqube_data:/opt/sonarqube/data \
     -v sonarqube_extensions:/opt/sonarqube/extensions \
     -v sonarqube_logs:/opt/sonarqube/logs \
+    -v sonarqube_temp:/opt/sonarqube/temp \
     -e SONAR_JDBC_URL="..." \
     -e SONAR_JDBC_USERNAME="..." \
     -e SONAR_JDBC_PASSWORD="..." \
